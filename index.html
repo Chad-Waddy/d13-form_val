@@ -1,0 +1,98 @@
+doctype
+<html>
+<head></head>
+<body>
+    <label for=""></label>
+</body>
+
+    <imput type="text" value="$eCret1" id="typearea">sda</imput>
+
+        <div id="msgBox">
+            <div id="msgSC">
+<textarea name="" id="typearea" cols="30" rows="10" value="$eCret1"></textarea>
+                <button onclick="checklength()">check</button>
+            </div>
+            <div id="msgUC">
+
+            </div>
+            <div id="msgLC">
+
+            </div>
+            <div id="msgNum">
+
+            </div>
+            <div id="msgLength">
+
+            </div>
+            
+
+
+        </div>
+        <script>
+
+
+            // diffrent way of doing the samme thing
+        //    var regex__
+        var regexlc =/ [a-z]/;
+            var regexNum = /[0-9]/;
+                var regexSC = /[!@#$%^^&*()]/;
+
+/////////////////////
+            function checklength(){
+                var typingareavalue = document.getElementById('typingarea').value;
+                var requiredLength = 7;
+                var msgLength = documet.getElementById('msgLength');
+                if(typingAreaValue.match(regexLength)){msgLC.style.color = 'green';}
+                    else{msgLC.style.color = 'red'}
+            }
+/////((if element isnt defined correct it will be blue)if correct will be yellow)
+            //^check to see if value has a special character+ green msgSC if yes, else red 
+
+          \\  //^Check to see if value has a lowercase character+ green msgLC if yes , if no red 
+//#                 get the value from the imput
+            //$  let Boxvalue = document.getElementById("typingarea").value;
+                function CheckLC(){
+                    const typingarea = document.querySelector('#TypingArea')
+                    const regexLC = new RegExp('[a-z]');
+                    const msgLC = document.getElementById('msgLC')
+                    if(typingAreaValue.match(regexLC)){msgLC.style.color = 'green';}
+                    else{msgLC.style.color = 'red'}
+                }
+
+
+                //$ add typingArea keyup event listener to run checkLC
+                document.getElementById('typingarea').addEventListener('keyup', CheckLC);
+
+
+//#                 check the regex expression for lowercase
+            //$  let lowercase = ________XXX
+//#                 check if the value matches the regex expression
+         //$   Boxvalue.matches.lowercase = true or false
+//#         
+          //$  if true {msgLC.style.color = green}
+
+//#
+          //$  else {msgLC.style.color = red }
+            
+            //^check if value has an upercase character+ green msgUC yes , if no red
+            function CheckUC(){
+                    const TypingArea = document.querySelector('#TypingArea')
+                    const regexUC = new RegExp('[A-Z]');
+                    const msgLC = document.getElementById('msgLC')
+                    if(typingAreaValue.match(regexUC)){msgLC.style.color = 'green';}
+                    else{msgLC.style.color = 'red'}
+                }
+                document.getElementById('typingarea').addEventListener('keyup', CheckUC);
+            //^check if value has a number+ green msgLength if yes, else red
+            function CheckNum(){
+                    const TypingArea = document.querySelector('#TypingArea')
+                    const regexNum = new RegExp('[0-9]');
+                    const msgLC = document.getElementById('msgLC')
+                    if(typingAreaValue.match(regexNum)){msgLC.style.color = 'green';}
+                    else{msgLC.style.color = 'red'}
+                }
+                document.getElementById('typingarea').addEventListener('keyup', CheckNum);
+        </script>
+        <script src="app.js"></script>
+
+</html>

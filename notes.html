@@ -1,0 +1,156 @@
+<html>
+<head></head>
+<body>
+    <label for=""></label>
+
+
+    <imput type="text" value="$eCret1" id="typearea">sda</imput>
+
+        <div id="msgBox">
+            <div id="msgSC">
+<textarea name="" id="typearea" cols="30" rows="10" value="$eCret1"></textarea>
+                <button onclick="checklength()">check</button>
+                <script>
+
+
+//-------------------------------------------------------------
+            // key //
+
+
+
+            //  ^ - objectives
+            //  $ - work 
+            //3 # - explanation
+            //4
+            //
+
+/////////----------YOUR BIGEST PROBLEM IS SPELLING ___-^-__-------------
+
+
+
+
+
+
+
+            //---------------------------------------
+// diffrent way of doing the samme thing
+//    var regex__
+var regexlc =/ [a-z]/;
+    var regexNum = /[0-9]/;
+        var regexSC = /[!@#$%^^&*()]/;
+        ///ect
+
+/////////////////////
+    function checklength(){
+        var typingareavalue = document.getElementById('typingarea').value;
+        var requiredLength = 7;
+        var msgLength = documet.getElementById('msgLength');
+        if(typingAreaValue.match(regexLength)){msgLC.style.color = 'green';}
+            else{msgLC.style.color = 'red'}
+    }
+/////((if element isnt defined correct it will be blue)if correct will be yellow)
+    //^     1   check to see if value has a special character+ green msgSC if yes, else red 
+
+  \\  //^Check to see if value has a lowercase character+ green msgLC if yes , if no red 
+//#                 get the value from the imput
+    //$  let Boxvalue = document.getElementById("typingarea").value;
+        function CheckLC(){
+            const typingarea = document.querySelector('#TypingArea')
+            const regexLC = new RegExp('[a-z]');
+            const msgLC = document.getElementById('msgLC')
+            if(typingAreaValue.match(regexLC)){msgLC.style.color = 'green';}
+            else{msgLC.style.color = 'red'}
+        }
+        //$ add typingArea keyup event listener to run checkLC
+        document.getElementById('typingarea').addEventListener('keyup', CheckLC);
+
+
+//#                 check the regex expression for lowercase
+    //$  let lowercase = ________XXX
+//#                 check if the value matches the regex expression
+ //$   Boxvalue.matches.lowercase = true or false
+//#         
+  //$  if true {msgLC.style.color = green}
+
+//#
+  //$  else {msgLC.style.color = red }
+    
+    //^check if value has an upercase character+ green msgUC yes , if no red
+    function CheckUC(){
+            const TypingArea = document.querySelector('#TypingArea')
+            const regexUC = new RegExp('[A-Z]');
+            const msgLC = document.getElementById('msgLC')
+            if(typingAreaValue.match(regexUC)){msgLC.style.color = 'green';}
+            else{msgLC.style.color = 'red'}
+        }
+        document.getElementById('typingarea').addEventListener('keyup', CheckUC);
+    //^check if value has a number+ green msgLength if yes, else red
+    function CheckNum(){
+            const TypingArea = document.querySelector('#TypingArea')
+            const regexNum = new RegExp('[0-9]');
+            const msgLC = document.getElementById('msgLC')
+            if(typingAreaValue.match(regexNum)){msgLC.style.color = 'green';}
+            else{msgLC.style.color = 'red'}
+        }
+        document.getElementById('typingarea').addEventListener('keyup', CheckNum);
+</script>
+<script src="app.js">
+
+
+//-----------------------
+
+//pasword checker  
+function = CheckPswd //button id 
+                    (){ 
+ var ___id name = document.getElementById(' id name ');
+ var pswd = document.getElementById('pswdInput').value;
+ if(pswd.length >= 8){
+    msgArea.innerHTML = 'your password is good '
+ }
+else {
+    msgAreaPswd.innerHTML = 'your password is too short.'
+}
+
+}     //-----------------
+
+//      --WORKING VARIABLE--
+//
+<input  id="pswdInput" ><!--  required length is 7-->  
+
+<button onclick="checkPswd()"> ----name of button---</button>
+<div id="msgAreaPswdLen"> password length</div>
+<div id="msgAreaPswdNC"> password NC</div>
+
+
+<Script>
+
+    function checkPswd(){
+        
+        var pswd = document.getElementById('pswdInput').value;
+        
+        var msgAreaPswdNC = document.getElementById('msgAreaPswdNC')
+        var requiredNC = /[0-9]/;
+        if (pswd.match(requiredNC)){ msgAreaPswdNC.innerHTML = "your password has number"
+        }
+        else { msgAreaPswdNC.innerHTML = " your password doesnt have a number"
+        }
+
+
+
+
+
+
+        var msgAreaPswdLen = document.getElementById('msgAreaPswdLen');
+        var requiredLength = 8;
+        if(pswd.length >= requiredLength){
+            msgAreaPswdLen.innerHTML = 'your password is long enough ';
+        }
+        else {
+        msgAreaPswdLen.innerHTML = 'your password is too short.';
+        }
+
+    }     
+
+
+</script>
+</body>
